@@ -6,6 +6,7 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import api from './utils/api'
 
 Vue.component('v-icon', Icon)
 
@@ -18,3 +19,9 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+Object.defineProperty(Vue.prototype, '$api', {
+  get () {
+    return api
+  }
+})

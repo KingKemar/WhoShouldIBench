@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>hahaha :{{ URL }}</h1>
+    <h1>Choose your fight :</h1>
     <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>

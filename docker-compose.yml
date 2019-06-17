@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+    wsib-django:
+        build: ./whoshouldibench
+        command: ["make", "run-dev"]
+        networks:
+            - backend
+        ports:
+            - 2222:2222
+    wsib-vuejs:
+        build: ./wsib-front
+        ports:
+            - 3000:3000
+        environment:
+            - PORT=3000
+            - NODE_ENV=development
+            - CHOKIDAR_USEPOLLING=true
+        stdin_open: true
+        tty: true
+
+networks:
+    backend:
+volumes:
+    dbdata:
