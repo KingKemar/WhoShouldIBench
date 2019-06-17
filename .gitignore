@@ -1,0 +1,12 @@
+*/dist/
+*/elm-stuff/
+*/node_modules/
+*.pyc
+**.egg-info/
+backend-anyblok/.coverage
+package-lock.json
+front-elm/elm.js
+front-elm/main.js
+.vscode
+venv
+docker-compose.override.yml
